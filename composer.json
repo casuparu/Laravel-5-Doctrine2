@@ -1,0 +1,21 @@
+{
+    "name": "choi/laravel5-doctrine2",
+    "description": "Doctrine2 for Laravel 5",
+    "keywords": ["laravel", "doctrine"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Choi",
+            "email": "krelle@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.0",
+        "doctrine/orm": "~2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Choi\\Doctrine2\\": "src/"
+        }
+    }
+}
