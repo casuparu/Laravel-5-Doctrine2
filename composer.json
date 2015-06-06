@@ -10,12 +10,17 @@
         }
     ],
     "require": {
-        "illuminate/support": "~5.0",
+        "illuminate/support": "~5.1",
         "doctrine/orm": "~2.5"
     },
     "autoload": {
         "psr-4": {
             "Choi\\Doctrine2\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "5.1-dev"
         }
     }
 }
