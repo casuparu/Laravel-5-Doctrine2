@@ -11,7 +11,7 @@
     ],
     "require": {
         "illuminate/support": "~5.0",
-        "doctrine/orm": "~2.4"
+        "doctrine/orm": "~2.5"
     },
     "autoload": {
         "psr-4": {
