@@ -1,4 +1,6 @@
-<?php namespace Choi\Doctrine2;
+<?php
+
+namespace Choi\Doctrine2;
 
 use Exception;
 

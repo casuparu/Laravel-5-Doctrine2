@@ -1,4 +1,6 @@
-<?php namespace Choi\Doctrine2\Facades;
+<?php
+
+namespace Choi\Doctrine2\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
