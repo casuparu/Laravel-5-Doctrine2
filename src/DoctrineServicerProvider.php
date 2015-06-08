@@ -1,6 +1,6 @@
 <?php
 
-namespace Choi\Doctrine2;
+namespace Choi\Doctrine;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
@@ -8,7 +8,7 @@ use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-class Doctrine2ServiceProvider extends ServiceProvider
+class DoctrineServiceProvider extends ServiceProvider
 {
     /**
      * Database connections
@@ -40,7 +40,7 @@ class Doctrine2ServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/doctrine2.php' => config_path('choi/doctrine2.php'),
+            __DIR__.'/config/doctrine.php' => config_path('choi/doctrine.php'),
         ]);
     }
 
@@ -51,7 +51,7 @@ class Doctrine2ServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/doctrine2.php', 'choi.doctrine2');
+        $this->mergeConfigFrom(__DIR__.'/config/doctrine.php', 'choi.doctrine');
 
         $this->registerConnections();
         $this->registerConfig();
@@ -171,7 +171,7 @@ class Doctrine2ServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
-        $config = Config::get('choi.doctrine2');
+        $config = Config::get('choi.doctrine');
         switch($config['mapper']) {
             case 'annotation':
             case 'docblock':
@@ -201,7 +201,7 @@ class Doctrine2ServiceProvider extends ServiceProvider
      */
     protected function registerEntityManager()
     {
-        $this->app->singleton('choi.doctrine2.entitymanager', function() {
+        $this->app->singleton('choi.doctrine.entitymanager', function() {
             return EntityManager::create($this->connection, $this->config);
         });
     }

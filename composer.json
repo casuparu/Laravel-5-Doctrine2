@@ -1,5 +1,5 @@
 {
-    "name": "choi/doctrine2",
+    "name": "choi/doctrine",
     "description": "Doctrine2 for Laravel 5",
     "keywords": ["laravel", "doctrine"],
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Choi\\Doctrine2\\": "src/"
+            "Choi\\Doctrine\\": "src/"
         }
     },
     "extra": {
