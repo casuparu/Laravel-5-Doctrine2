@@ -1,4 +1,6 @@
-<?php namespace Choi\Doctrine2\Facades;
+<?php
+
+namespace Choi\Doctrine\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -12,6 +14,6 @@ class EntityManagerFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'choi.doctrine2.entitymanager';
+        return 'choi.doctrine.entitymanager';
     }
 }
