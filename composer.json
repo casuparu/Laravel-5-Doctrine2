@@ -1,5 +1,5 @@
 {
-    "name": "choi/laravel5-doctrine2",
+    "name": "choi/doctrine2",
     "description": "Doctrine2 for Laravel 5",
     "keywords": ["laravel", "doctrine"],
     "license": "MIT",
